@@ -1,11 +1,9 @@
-// import { useState } from "react";
-// import { Route, Routes } from "react-router-dom";
-
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import { useState } from "react";
-import Topbar from "./components/Topbar";
-import Sidebar from "./components/Sidebar.jsx";
+import Topbar from "./components/Topbar/Topbar.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Invoices from "./components/invoices/index.jsx";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -18,7 +16,7 @@ function App() {
           <Sidebar isSidebar={isSidebar} />
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
-
+            <Invoices />
           </main>
         </div>
       </ThemeProvider>
