@@ -14,9 +14,8 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import { tokens } from "../theme";
-// import { Link } from "react-router-dom";
-import faceImg from "../images/user.png"
+import { tokens } from "../../theme";
+import faceImg from "../../images/user.png"
 const Item = ({ title = '', to = '', icon = '', selected = '', setSelected = () => { } }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -30,7 +29,6 @@ const Item = ({ title = '', to = '', icon = '', selected = '', setSelected = () 
             icon={icon}
         >
             <Typography>{title}</Typography>
-            {/* <Link /> */}
         </MenuItem>
     );
 };
@@ -63,7 +61,6 @@ const Sidebar = () => {
         >
             <ProSidebar collapsed={isCollapsed}>
                 <Menu iconShape="square">
-                    {/* LOGO AND MENU ICON */}
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
                         icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
